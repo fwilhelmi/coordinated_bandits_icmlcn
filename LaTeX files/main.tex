@@ -1,0 +1,71 @@
+\documentclass[conference,a4paper]{IEEEtran}
+\usepackage[left=1.43cm,right=1.43cm,top=1.8cm,bottom=4.21cm]{geometry}
+\IEEEoverridecommandlockouts
+
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{subfiles}
+\usepackage{soul}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{algorithmic}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\algsetup{linenosize=\small}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\usepackage{verbatim}
+
+\begin{document}
+
+\title{Coordinated Multi-Armed Bandits for Improved Spatial Reuse in Wi-Fi}
+
+\author{
+\IEEEauthorblockN{Francesc Wilhelmi$^{\star\dagger}$, Boris Bellalta$^{\dagger}$, Szymon Szott$^{\mathsection}$, Katarzyna Kosek-Szott$^{\mathsection}$, Sergio Barrachina-Mu\~noz$^{\ddagger}$\vspace{0.1cm}
+}
+%
+\IEEEauthorblockA{$^{\star}$\emph{Nokia Bell Labs, Stuttgart, Germany}}
+\IEEEauthorblockA{$^{\dagger}$\emph{Universitat Pompeu Fabra, Barcelona, Spain}}
+\IEEEauthorblockA{$^{\mathsection}$\emph{AGH University of Krakow, Poland}}
+\IEEEauthorblockA{$^{\ddagger}$\emph{Centre Tecnològic de Telecomunicacions de Catalunya, Barcelona, Spain}}
+%
+\IEEEauthorblockN{\thanks{This paper is supported by the CHIST-ERA Wireless AI 2022 call MLDR project (ANR-23-CHR4-0005), partially funded by AEI and NCN under projects PCI2023-145958-2 and DEC-2023/05/Y/ST7/00004, respectively. B. Bellalta's contribution is supported by Wi-XR PID2021123995NB-I00 (MCIU/AEI/FEDER,UE) and MdMCEX2021-001195-M/ AEI /10.13039/501100011033. S. Barrachina-Muñoz is supported by Grant PID2021-126431OB-I00 funded by MCIN/AEI/ 10.13039/501100011033 (ERDF A way of making Europe) and by 6GE2E (2021 SGR 00770) from Generalitat de Catalunya.}}
+}
+
+
+
+\bstctlcite{IEEEexample:BSTcontrol}
+
+\maketitle
+
+\begin{abstract}
+Multi-Access Point Coordination (MAPC) and Artificial Intelligence and Machine Learning (AI/ML) are expected to be key features in future Wi-Fi, such as the forthcoming IEEE 802.11bn (Wi-Fi~8) and beyond. In this paper, we explore a coordinated solution based on online learning to drive the optimization of Spatial Reuse (SR), a method that allows multiple devices to perform simultaneous transmissions by controlling interference through Packet Detect (PD) adjustment and transmit power control. In particular, we focus on a Multi-Agent Multi-Armed Bandit (MA-MAB) setting, where multiple decision-making agents concurrently configure SR parameters from coexisting networks by leveraging the MAPC framework, and study various algorithms and reward-sharing mechanisms. We evaluate different MA-MAB implementations using Komondor, a well-adopted Wi-Fi simulator, and demonstrate that AI-native SR enabled by coordinated MABs can improve the network performance over current Wi-Fi operation: mean throughput increases by 15\%, fairness is improved by increasing the minimum throughput across the network by 210\%, while the maximum access delay is kept below 3~ms.
+\end{abstract}
+
+
+\begin{IEEEkeywords}
+Artificial Intelligence, IEEE 802.11, Machine Learning, Multi Access Point Coordination, Multi-Armed Bandits, Spatial Reuse, Wi-Fi
+\end{IEEEkeywords}
+
+\subfile{sections/1_introduction}
+
+\subfile{sections/2_related_work}
+
+\subfile{sections/3_mapc_solution}
+
+\subfile{sections/4_performance_evaluation}
+
+\subfile{sections/5_conclusions}
+
+\bibliographystyle{IEEEtran}
+\bibliography{bib}
+
+\end{document}
